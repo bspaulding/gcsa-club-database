@@ -1,0 +1,11 @@
+** Daemonized, any open files are closed.  Look at /Users/brads/Documents/Schoolwork/Computers and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:3000
+** Starting Rails with development environment...
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:3000
+** Writing PID file to /Users/brads/Documents/Schoolwork/Computers
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/helpers/form_helper.rb:621: warning: Object#type is deprecated; use Object#class
+/Users/brads/Documents/Schoolwork/Computers and Society/gcsa-club-database/app/views/groups/show.html.erb:3: warning: Object#type is deprecated; use Object#class
