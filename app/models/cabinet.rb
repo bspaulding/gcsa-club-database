@@ -1,0 +1,2 @@
+class Cabinet < Group
+end

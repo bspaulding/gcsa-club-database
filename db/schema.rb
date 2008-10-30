@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20081022234013) do
   create_table "groups", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "kind"
+    t.string   "type"
     t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"

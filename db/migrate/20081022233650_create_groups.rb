@@ -3,7 +3,7 @@ class CreateGroups < ActiveRecord::Migration
     create_table :groups do |t|
       t.string :name
       t.text :description
-      t.string :kind
+      t.string :type
       t.boolean :active
 
       t.timestamps

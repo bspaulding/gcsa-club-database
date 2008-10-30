@@ -1,0 +1,2 @@
+class Council < Group
+end
