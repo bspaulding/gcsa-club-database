@@ -42,7 +42,15 @@ class GroupsController < ApplicationController
   end
 
   def update
-    Group.find(params[:group][:id]).update_attributes(params[:group])
+    if params[:club]
+      Club.find(params[:id]).update_attributes!(params[:club])
+    elsif params[:council]
+      Council.find(params[:id]).update_attributes!(params[:council])
+    elsif params[:cabinet]
+      Cabinet.find(params[:id]).update_attributes!(params[:council])
+    else
+      Publication.find(params[:id]).update_attributes!(params[:publication])
+    end
   end
 
   def destroy
