@@ -1,2 +1,9 @@
-<h1>Groups#edit</h1>
-<p>Find me in app/views/groups/edit.html.erb</p>
+<h1>Update Group</h1>
+<% form_for @group, :url => { :controller => "groups", :action => "update" } do |f| %>
+<%= f.error_messages %>
+<%= f.label :name %>: <%= f.text_field :name %><br/>
+<%= f.label :description %>:<br/><%= f.text_area :description %><br/>
+<%= f.label :type %>: <%= f.collection_select :type, ["club", "council", "cabinet", "publication"], :to_s, :to_s %><br/>
+<%= f.label :active %>: <%= f.check_box :active, {:checked => true} %><br/>
+<%= f.submit 'Update Group' %>
+<% end %>
