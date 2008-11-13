@@ -43,3 +43,4 @@ PARAMS: {"REQUEST_METHOD"=>"GET"}
 ** Rails signals registered.  HUP => reload (without restart).  It might not work well.
 ** Mongrel 1.1.4 available at 0.0.0.0:3000
 ** Writing PID file to /Users/Tate/Documents/gcsa-club-database/tmp/pids/mongrel.pid
+** TERM signal received.
