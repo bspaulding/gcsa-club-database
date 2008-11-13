@@ -1,0 +1,19 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#wrapper {
+	width: 800px;
+	margin: 0px auto;
+}
+
+#flash {
+	width: 500px;
+	text-align: center;
+	
+	border: 2px solid #FF0000;
+	background: #FFF0F0;
+
+	padding: 25px;
+}

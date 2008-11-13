@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>GCSA Club Database: Login</title>
+<%= stylesheet_link_tag "master" %>
+</head>
+
+<body>
+<div id="wrapper">	
+	<h1>Login</h1>
+
+	<% if flash[:notice] %>
+	<div id="flash"><%= flash[:notice] %></div>
+	<% end %>
+
+	<%= yield :layout %>
+</div>
+</body>
+</html>

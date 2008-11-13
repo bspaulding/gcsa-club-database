@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  before_filter :check_authentication
+
   def index
     @groups = Group.all
   end
