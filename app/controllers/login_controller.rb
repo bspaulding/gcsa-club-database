@@ -8,6 +8,7 @@ class LoginController < ApplicationController
       redirect_to :action => 'index'
     else
       session[:username] = params[:username]
+      session[:password] = params[:password]
       redirect_to :controller => 'groups', :action => 'index'
     end
   end

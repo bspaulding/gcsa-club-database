@@ -43,3 +43,12 @@ PARAMS: {"REQUEST_METHOD"=>"GET"}
 ** Rails signals registered.  HUP => reload (without restart).  It might not work well.
 ** Mongrel 1.1.4 available at 0.0.0.0:3000
 ** Writing PID file to /Users/Tate/Documents/gcsa-club-database/tmp/pids/mongrel.pid
+** Daemonized, any open files are closed.  Look at /Users/brads/Documents/Schoolwork/Computers and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:3000
+** Starting Rails with development environment...
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.5 available at 0.0.0.0:3000
+** Writing PID file to /Users/brads/Documents/Schoolwork/Computers

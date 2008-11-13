@@ -2,7 +2,10 @@ class GroupsController < ApplicationController
   before_filter :check_authentication
 
   def index
-    @groups = Group.all
+    @cabinets = Cabinet.all
+    @clubs = Club.all
+    @councils = Council.all
+    @publications = Publication.all
   end
 
   def show
