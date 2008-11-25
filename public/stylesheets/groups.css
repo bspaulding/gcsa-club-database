@@ -1,0 +1,16 @@
+#groups {
+	width: 800px;
+	height: 600px;
+}
+
+#groups_list {
+	width: 200px;
+	height: 600px;
+	float: left;
+}
+
+#group_details {
+	width: 600px;
+	height: 600px;
+	float: right;
+}
