@@ -2,10 +2,26 @@ class GroupsController < ApplicationController
   before_filter :check_authentication
 
   def index
-    @cabinets = Cabinet.all
-    @clubs = Club.all
-    @councils = Council.all
-    @publications = Publication.all
+    @groups = Cabinet.all
+  end
+
+  def update_groups_list
+    case params["group_type"]
+      when "Cabinets"
+        @groups = Cabinet.all
+      when "Councils"
+        @groups = Council.all
+      when "Clubs"
+        @groups = Club.all
+      when "Publications"
+        @groups = Publication.all
+      else
+        redirect_to :action => :index
+    end
+  end
+  
+  def update_group_detail
+    @group = Group.find(params[:id])
   end
 
   def show
