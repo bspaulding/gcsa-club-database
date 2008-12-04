@@ -16,6 +16,6 @@ test:
 production:
   adapter: mysql
   database: /var/run/mysqld/mysqld.sock
-  user: rails
+  username: rails
   password: rail5
   timeout: 5000
