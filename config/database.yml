@@ -15,7 +15,8 @@ test:
 
 production:
   adapter: mysql
-  database: /var/run/mysqld/mysqld.sock
+  database: gcsagroups
   username: rails
   password: rail5
   timeout: 5000
+  socket: /var/run/mysqld/mysqld.sock
