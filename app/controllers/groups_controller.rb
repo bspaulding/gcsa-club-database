@@ -21,6 +21,9 @@ class GroupsController < ApplicationController
       else
         redirect_to :action => :index
     end
+    @groups.sort! do |a,b|
+      a.name <=> b.name
+    end
   end
   
   def update_group_detail
