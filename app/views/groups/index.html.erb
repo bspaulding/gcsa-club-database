@@ -14,16 +14,20 @@
 <div id="groups">
 	<div id="groups_list">
 		<ul>
-		<% @groups.each do |group| %>
-		<li><%= link_to_remote group.name, :update => "group_detail", :url => {:action => 'update_group_detail', :id => group.id} %></li>
+		<% unless @groups.nil? %>
+			<% @groups.each do |group| %>
+			<li><%= link_to_remote group.name, :update => "group_detail", :url => {:action => 'update_group_detail', :id => group.id} %></li>
+			<% end %>
 		<% end %>
 		</ul>
 	</div>
 	<div id="group_detail">
-		<% first_group = @groups.first %>
-		<h3><%= first_group.name %></h3>
-		<p><b>Leader(s):</b> <%= (first_group.leader_name.nil?) ? "None" : first_group.leader_name %>
-		<p><b>Description</b><br/>
-		<%= first_group.description %></p>
+		<% unless @groups.nil? %>
+			<% first_group = @groups.first %>
+			<h3><%= first_group.name %></h3>
+			<p><b>Leader(s):</b> <%= (first_group.leader_name.nil?) ? "None" : first_group.leader_name %>
+			<p><b>Description</b><br/>
+			<%= first_group.description %></p>
+		<% end %>
 	</div>
 </div>
