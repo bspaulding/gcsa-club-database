@@ -14,7 +14,12 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   def check_authentication
-    timed_out = session[:last_activity_time] <= 5.minutes.ago.to_i
+    if session[:last_activity_time]
+      timed_out = session[:last_activity_time] <= 5.minutes.ago.to_i
+    else
+      timed_out = false
+    end
+    
     unless session[:username] && !timed_out
       if timed_out
         flash[:notice] = "Your session has timed out. Please log in again."
