@@ -1,5 +1,7 @@
 <h1><%= @group.name %></h1>
 
+<%= link_to 'Back to Index', groups_path %>
+
 <p><em><%= @group.class %> (<%= @group.active ? "Active" : "Inactive" %>)</em></p>
 
 <p><b>Description:</b><br/>

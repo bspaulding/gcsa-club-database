@@ -3,6 +3,9 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Cabinet.all
+    @groups.sort! do |a,b|
+      a.name <=> b.name
+    end
   end
 
   def update_groups_list

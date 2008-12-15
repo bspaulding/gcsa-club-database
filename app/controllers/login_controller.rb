@@ -9,8 +9,15 @@ class LoginController < ApplicationController
     else
       session[:username] = params[:username]
       session[:password] = params[:password]
+      session[:last_activity_time] = Time.now.to_i
       redirect_to :controller => 'groups', :action => 'index'
     end
+  end
+
+  def logout
+    session[:username] = false
+    session[:password] = false
+    redirect_to :action => :index
   end
 
 end

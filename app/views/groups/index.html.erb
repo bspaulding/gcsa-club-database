@@ -1,11 +1,14 @@
+<div align="right"><%= link_to "Logout", '/login/logout' %></div>
 <h1>GCSA Groups</h1>
 
 <select name="group_type" id="group_type_select">
 <%= options_for_select(["Cabinets", "Councils", "Clubs", "Publications"], "Cabinets") %>
 </select>
 
+<%= link_to 'New Group', new_group_path %>
+
 <%= observe_field 'group_type_select', :url => {:action => 'update_groups_list'},
-		:update => 'groups_list',
+		:update => { :success => 'groups_list', :failure => '/login/index' },
 		:with => 'group_type' %>
 
 <div id="groups">

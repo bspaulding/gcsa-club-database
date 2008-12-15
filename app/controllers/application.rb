@@ -14,8 +14,18 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   def check_authentication
-    unless session[:username]
-      redirect_to :controller => 'login', :action => 'index'
+    timed_out = session[:last_activity_time] <= 5.minutes.ago.to_i
+    unless session[:username] && !timed_out
+      if timed_out
+        flash[:notice] = "Your session has timed out. Please log in again."
+      end
+      if request.xhr?
+        render :update do |page|
+          page.redirect_to :controller => 'login', :action => 'index'
+        end
+      else
+        redirect_to :controller => 'login', :action => 'index'
+      end
     end
   end
 end

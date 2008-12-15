@@ -8,12 +8,16 @@ class User
       username += "@gordon.edu"
     end
     
-    # Create the LDAP Connection and attempt to bind, sending back the result as true or false
-    ldap = Net::LDAP.new
-    ldap.host = "elder2.gordon.edu" #"199.97.45.206"
-    ldap.port = 389
-    ldap.auth username, password
-    ldap.bind
+    if password.length == 0
+      return false
+    else
+      # Create the LDAP Connection and attempt to bind, sending back the result as true or false
+      ldap = Net::LDAP.new
+      ldap.host = "elder2.gordon.edu" #"199.97.45.206"
+      ldap.port = 389
+      ldap.auth username, password
+      ldap.bind
+    end
   end
   
   def self.find_by_email(email, username, password)
