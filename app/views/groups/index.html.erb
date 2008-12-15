@@ -1,7 +1,7 @@
 <h1>GCSA Groups</h1>
 
 <select name="group_type" id="group_type_select">
-<%= options_for_select(["Cabinets", "Councils", "Clubs", "Publications"], "Cabinets") %>
+<%= options_for_select(["Cabinets", "Clubs", "Councils", "Publications"], "Cabinets") %>
 </select>
 
 <%= observe_field 'group_type_select', :url => {:action => 'update_groups_list'},
