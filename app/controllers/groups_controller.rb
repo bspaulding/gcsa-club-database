@@ -65,13 +65,23 @@ class GroupsController < ApplicationController
 
   def update
     if params[:club]
-      Club.find(params[:id]).update_attributes!(params[:club])
+      @group = Club.find(params[:id])
+      @group.update_attributes(params[:club])
     elsif params[:council]
-      Council.find(params[:id]).update_attributes!(params[:council])
+      @group = Council.find(params[:id])
+      @group.update_attributes(params[:council])
     elsif params[:cabinet]
-      Cabinet.find(params[:id]).update_attributes!(params[:council])
+      @group = Cabinet.find(params[:id])
+      @group.update_attributes(params[:cabinet])
     else
-      Publication.find(params[:id]).update_attributes!(params[:publication])
+      @group = Publication.find(params[:id])
+      @group.update_attributes(params[:publication])
+    end
+    if @group.save
+      flash[:notice] = 'Post was successfully updated.'
+      redirect_to group_path(@group)
+    else
+      render :action => 'edit'
     end
   end
 
