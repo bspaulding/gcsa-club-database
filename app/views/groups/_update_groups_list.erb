@@ -1,0 +1,7 @@
+<ul>
+<% unless @groups.size == 0 %>
+	<% @groups.each do |group| %>
+	<li><%= link_to_remote group.name, :update => "group_detail", :url => {:action => 'update_group_detail', :id => group.id} %></li>
+	<% end %>
+<% end %>
+</ul>

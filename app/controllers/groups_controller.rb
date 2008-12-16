@@ -24,10 +24,12 @@ class GroupsController < ApplicationController
     @groups.sort! do |a,b|
       a.name <=> b.name
     end
+    render :partial => 'groups/update_groups_list', :object => @groups
   end
   
   def update_group_detail
     @group = Group.find(params[:id])
+    render :partial => 'groups/update_group_detail', :object => @group
   end
 
   def show

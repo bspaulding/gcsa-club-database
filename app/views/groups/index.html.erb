@@ -13,21 +13,11 @@
 
 <div id="groups">
 	<div id="groups_list">
-		<ul>
-		<% unless @groups.size == 0 %>
-			<% @groups.each do |group| %>
-			<li><%= link_to_remote group.name, :update => "group_detail", :url => {:action => 'update_group_detail', :id => group.id} %></li>
-			<% end %>
-		<% end %>
-		</ul>
+		<%= render :partial => 'groups/update_groups_list', :object => @groups %>
 	</div>
 	<div id="group_detail">
 		<% unless @groups.size == 0 %>
-			<% first_group = @groups.first %>
-			<h3><%= first_group.name %></h3>
-			<p><b>Leader(s):</b> <%= (first_group.leader_name.nil?) ? "None" : first_group.leader_name %>
-			<p><b>Description</b><br/>
-			<%= first_group.description %></p>
+			<%= render :partial => 'groups/update_group_detail', :object => @groups.first %>
 		<% end %>
 	</div>
 </div>

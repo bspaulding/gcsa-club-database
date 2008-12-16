@@ -1,11 +1,16 @@
 html, body {
 	margin: 0px;
 	padding: 0px;
+	background: #CCC;
 }
 
 #wrapper {
 	width: 800px;
 	margin: 0px auto;
+	padding: 25px;
+	background: #FFF;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
 }
 
 #flash {
@@ -15,5 +20,20 @@ html, body {
 	border: 2px solid #FF0000;
 	background: #FFF0F0;
 
-	padding: 25px;
+	padding: 15px;
+}
+
+#groups {
+	margin: 0px;
+	border: none;
+}
+
+#group_list {
+	margin: 0px;
+	border: none;
+}
+
+#group_detail {
+	margin: 0px;
+	border: none;
 }
