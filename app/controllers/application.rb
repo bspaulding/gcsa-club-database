@@ -32,5 +32,7 @@ class ApplicationController < ActionController::Base
         redirect_to :controller => 'login', :action => 'index'
       end
     end
+    
+    session[:last_activity_time] = Time.now.to_i
   end
 end
