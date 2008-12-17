@@ -13,7 +13,7 @@
 		<td><%= f.text_field :leader_name %> <em>(firstname.lastname)</em></td>
 	</tr><tr>
 		<th align="right">Status:</th>
-		<td><%= f.check_box :active, {:checked => true} %> Active? <%= f.check_box :on_probation, {:checked => true} %> On Probation?</td>
+		<td><%= f.check_box :active, {:checked => true} %> Active? <%= f.check_box :on_probation %> On Probation?</td>
 	</tr><tr>
 		<th align="right" valign="top"><%= f.label :description %>:</th>
 		<td><%= f.text_area :description %></td>
