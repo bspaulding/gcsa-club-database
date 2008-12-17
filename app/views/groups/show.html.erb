@@ -12,6 +12,15 @@
 	<% end %>
 	</em>
 </div>
-<p><b>Leader:</b> <%= (@group.leader_name.nil?) ? "None" : @group.leader_name %></p>
+<p><b>Leader:</b>
+<% if !@group.leader_name.nil? -%>
+	<% if @group.leader_name.size != 0 -%>
+		<%= mail_to("#{@group.leader_name}@gordon.edu") %>
+	<% else -%>
+		None
+	<% end -%>
+<% else -%>
+	None
+<% end -%></p>
 <p><b>Description</b><br/>
 <%= @group.description %></p>
