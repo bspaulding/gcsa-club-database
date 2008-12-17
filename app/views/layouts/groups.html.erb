@@ -15,8 +15,8 @@
 	
 	<% if flash[:notice] %>
 	<div align="center"><div id="flash_notice"><%= flash[:notice] %></div></div>
-	<% end %>
-	<% if flash[:error] %>
+	<script type="text/javascript" language="JavaScript"><%= visual_effect :fade, "flash_notice", :duration => 3.0 %></script>
+	<% elsif flash[:error] %>
 	<div align="center"><div id="flash_error"><%= flash[:error] %></div></div>
 	<% end %>
 

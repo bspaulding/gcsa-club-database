@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     
     unless session[:username] && !timed_out
       if timed_out
-        flash[:notice] = "Your session has timed out. Please log in again."
+        flash[:error] = "Your session has timed out. Please log in again."
       end
       if request.xhr?
         render :update do |page|
