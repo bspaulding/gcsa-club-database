@@ -23,6 +23,7 @@ a:hover, a:active {
 }
 
 #wrapper {
+	position: relative;
 	width: 800px;
 	margin: 0px auto;
 	padding: 25px;

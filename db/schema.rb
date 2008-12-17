@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081217050304) do
+ActiveRecord::Schema.define(:version => 20081217065508) do
 
   create_table "admin_access", :force => true do |t|
     t.string   "name"
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(:version => 20081217050304) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "leader_name"
-    t.string   "leader_email"
     t.boolean  "on_probation"
   end
 

@@ -1,9 +1,17 @@
-<h1><%= @group.name %></h1>
-
 <%= link_to 'Back to Index', groups_path %>
 
-<p><em><%= @group.class %> (<%= @group.active ? "Active" : "Inactive" %>)</em></p>
-
-<p><b>Description:</b><br/>
-<%= @group.description%></p>
-
+<div id="group_name"><%= @group.name %></div>
+<div id="group_status">
+	<em><b>Status:</b> 
+	<% if @group.on_probation %>
+		<div style="font-weight:bold;color:red;display:inline;">On Probation</div>
+	<% elsif @group.active %>
+	 	Active
+	<% else %>
+	 	Inactive
+	<% end %>
+	</em>
+</div>
+<p><b>Leader:</b> <%= (@group.leader_name.nil?) ? "None" : @group.leader_name %></p>
+<p><b>Description</b><br/>
+<%= @group.description %></p>
