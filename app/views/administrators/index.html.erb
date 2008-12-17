@@ -1,0 +1,12 @@
+<h1>Administrators</h1>
+<% remote_form_for @new_admin do |f| %>
+<div style="display:inline;font-size:0.9em;"><em>New Admin Username:</em> <%= f.text_field :username %></div> <%= f.submit 'Add Administrator' %>
+<% end %>
+<hr>
+<div id="admins_list">
+<ul id="admins_list_ul">
+<% @admins.each do |admin| %>
+<%= render :partial => 'administrators/admin_listing', :object => admin %>
+<% end %>
+</ul>
+</div>

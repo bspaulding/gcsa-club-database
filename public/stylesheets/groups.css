@@ -27,6 +27,11 @@
 	padding-bottom: 5px;
 }
 
+#groups_list ul li a.on_probation {
+	color: #FF0000;
+	font-style: italic;
+}
+
 #groups_list ul li a.active {
 	color: #2985DE;
 }

@@ -3,7 +3,7 @@
 	<% @groups.each do |group| %>
 	<li><%= link_to_remote group.name, :update => "group_detail",
 				:url => {:action => 'update_group_detail', :id => group.id},
-				:html => {:class => (group.active) ? 'active' : 'inactive'} %></li>
+				:html => {:class => (group.on_probation) ? 'on_probation' : ((group.active) ? 'active' : 'inactive')} %></li>
 	<% end %>
 <% else %>
 	<li><em>No Groups</em></li>

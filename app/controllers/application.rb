@@ -13,6 +13,13 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
   
+  def check_authorization
+    if !session[:is_admin]
+      flash[:error] = "You must be an administrator to access that function."
+      redirect_to :controller => 'groups', :action => 'index'
+    end
+  end
+  
   def check_authentication
     if session[:last_activity_time]
       timed_out = session[:last_activity_time] <= 5.minutes.ago.to_i

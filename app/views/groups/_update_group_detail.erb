@@ -6,7 +6,17 @@
 <% end %>
 
 <div id="group_name"><%= update_group_detail.name %></div>
-<div id="group_status"><em><b>Status:</b> <%= (update_group_detail.active) ? 'Active' : 'Inactive' %></em></div>
+<div id="group_status">
+	<em><b>Status:</b> 
+	<% if update_group_detail.on_probation %>
+		<div style="font-weight:bold;color:red;display:inline;">On Probation</div>
+	<% elsif update_group_detail.active %>
+	 	Active
+	<% else %>
+	 	Inactive
+	<% end %>
+	</em>
+</div>
 <p><b>Leader(s):</b> <%= (update_group_detail.leader_name.nil?) ? "None" : update_group_detail.leader_name %></p>
 <p><b>Description</b><br/>
 <%= update_group_detail.description %></p>

@@ -3,6 +3,6 @@
 <%= f.error_messages %>
 <%= f.label :name %>: <%= f.text_field :name %><br/>
 <%= f.label :description %>:<br/><%= f.text_area :description %><br/>
-<%= f.label :active %>: <%= f.check_box :active, {:checked => true} %><br/>
+Status: <%= f.check_box :active, {:checked => true} %> Active? <%= f.check_box :on_probation, {:checked => true} %> On Probation?<br/>
 <%= f.submit 'Update Group' %>
 <% end %>

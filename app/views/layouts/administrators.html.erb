@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>GCSA-Groups.Gordon.Edu</title>
+<%= javascript_include_tag :defaults %>
+<%= stylesheet_link_tag "master" %>
+<%= stylesheet_link_tag "administrators" %>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div align="right">(<%= session[:username] %>) <%= link_to "Logout", '/login/logout' %></div>
+		<div class="title">gcsa-groups.gordon.edu</div>
+	</div>
+	
+	<% if flash[:notice] %>
+	<div align="center"><div id="flash_notice"><%= flash[:notice] %></div></div>
+	<script type="text/javascript" language="JavaScript"><%= visual_effect :fade, "flash_notice", :duration => 3.0 %></script>
+	<% elsif flash[:error] %>
+	<div align="center"><div id="flash_error"><%= flash[:error] %></div></div>
+	<% end %>
+
+	<%= yield :layout %>
+</div>
+</body>
+</html>

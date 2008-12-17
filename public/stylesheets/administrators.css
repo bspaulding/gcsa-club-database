@@ -1,0 +1,10 @@
+#admins_list ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+#admins_list ul li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}

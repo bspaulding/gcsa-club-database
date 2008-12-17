@@ -3,7 +3,7 @@
 </select>
 
 <% if session[:is_admin] %>
-<%= link_to 'New Group', new_group_path %>
+<%= link_to 'New Group', new_group_path %> | <%= link_to 'Manage Administrators', administrators_path %>
 <% end %>
 
 <%= observe_field 'group_type_select', :url => {:action => 'update_groups_list'},

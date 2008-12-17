@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_filter :check_authentication
-#  before_filter :check_authorization
+  before_filter :check_authorization, :except => ['index', 'update_groups_list', 'update_group_detail']
 
   def index
     @groups = Cabinet.all
