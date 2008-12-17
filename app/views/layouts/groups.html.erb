@@ -8,6 +8,10 @@
 
 <body>
 <div id="wrapper">
+	<div id="header">
+		<div align="right">(<%= session[:username] %>) <%= link_to "Logout", '/login/logout' %></div>
+		<div class="title">gcsa-groups.gordon.edu</div>
+	</div>
 	<% if flash[:notice] %>
 	<div id="flash"><%= flash[:notice] %></div>
 	<% end %>

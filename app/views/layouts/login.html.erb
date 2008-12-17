@@ -5,14 +5,18 @@
 </head>
 
 <body>
-<div id="wrapper">	
-	<h1>Login</h1>
-
-	<% if flash[:notice] %>
-	<div id="flash"><%= flash[:notice] %></div>
-	<% end %>
-
-	<%= yield :layout %>
+<div id="wrapper">
+	<div id="header">
+		<div class="title">gcsa-groups.gordon.edu</div>	
+	</div>
+	
+	<div id="body" align="center">
+		<% if flash[:notice] %>
+		<div id="flash"><%= flash[:notice] %></div>
+		<% end %>
+		<h1>Login</h1>
+		<%= yield :layout %>
+	</div>
 </div>
 </body>
 </html>

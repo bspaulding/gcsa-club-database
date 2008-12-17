@@ -1,7 +1,15 @@
 html, body {
-	margin: 0px;
+	margin: 10px 0px;
 	padding: 0px;
 	background: #CCC;
+	
+	font-family: verdana;
+	font-size: 1em;
+}
+
+h1 {
+	font-family: verdana;
+	font-size: 1.75em;
 }
 
 #wrapper {
@@ -9,8 +17,9 @@ html, body {
 	margin: 0px auto;
 	padding: 25px;
 	background: #FFF;
-	border-left: 1px solid #000;
-	border-right: 1px solid #000;
+	border: 1px solid #000;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
 }
 
 #flash {
@@ -21,19 +30,17 @@ html, body {
 	background: #FFF0F0;
 
 	padding: 15px;
+	font-family: verdana;
 }
 
-#groups {
-	margin: 0px;
-	border: none;
+#header {
+	border-bottom: 1px dotted #000;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
 }
 
-#group_list {
-	margin: 0px;
-	border: none;
-}
-
-#group_detail {
-	margin: 0px;
-	border: none;
+#header .title {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
 }

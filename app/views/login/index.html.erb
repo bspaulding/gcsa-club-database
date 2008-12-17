@@ -1,8 +1,13 @@
 <%= form_tag :method => "POST", :action => 'login' %>
-<label for="username">Username:</label><br/>
-<input type="text" name="username" size="20"></input><br/>
-<br/>
-<label for="password">Password:</label><br/>
-<input type="password" name="password" size="20"></input><br/>
-<%= submit_tag "Log In" %>
+<table>
+	<tr>
+		<th align="right"><label for="username">Username:</label></th>
+		<td><input type="text" name="username" size="20"></input></td>
+	</tr><tr>
+		<th align="right"><label for="password">Password:</label></th>
+		<td><input type="password" name="password" size="20"></input></td>
+	</tr><tr>
+		<td colspan=2 align="center"><%= submit_tag "Log In" %></td>
+	</tr>
+</table>
 </form>
