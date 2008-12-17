@@ -6,9 +6,6 @@
 		<th align="right"><%= f.label :name %>:</th>
 		<td><%= f.text_field :name %></td>
 	</tr><tr>
-		<th align="right"><%= f.label :type %>:</th>
-		<td><%= f.collection_select :type, ["Cabinet", "Council", "Club", "Publication"], :to_s, :to_s %></td>
-	</tr><tr>
 		<th align="right">Leader Username:</th>
 		<td><%= f.text_field :leader_name %> <em>(firstname.lastname)</em></td>
 	</tr><tr>
@@ -18,7 +15,7 @@
 		<th align="right" valign="top"><%= f.label :description %>:</th>
 		<td><%= f.text_area :description %></td>
 	</tr><tr>
-		<td colspan=2 align="center"><%= f.submit 'Create Group' %></td>
+		<td colspan=2 align="center"><%= f.submit 'Update Group' %></td>
 	</tr>
 </table>
 <% end %>
