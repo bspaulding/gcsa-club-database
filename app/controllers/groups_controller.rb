@@ -44,13 +44,13 @@ class GroupsController < ApplicationController
   def create
     if request.post?
       case params[:group][:type]
-        when "club"
+        when "Club"
           @group = Club.create(params[:group])
-        when "council"
+        when "Council"
           @group = Council.create(params[:group])
-        when "cabinet"
+        when "Cabinet"
           @group = Cabinet.create(params[:group])
-        when "publication"
+        when "Publication"
           @group = Publication.create(params[:group])
       end      
       if @group.save
