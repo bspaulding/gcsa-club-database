@@ -12,7 +12,10 @@
 	
 	<div id="body" align="center">
 		<% if flash[:notice] %>
-		<div id="flash"><%= flash[:notice] %></div>
+		<div align="center"><div id="flash_notice"><%= flash[:notice] %></div></div>
+		<% end %>
+		<% if flash[:error] %>
+		<div align="center"><div id="flash_error"><%= flash[:error] %></div></div>
 		<% end %>
 		<h1>Login</h1>
 		<%= yield :layout %>

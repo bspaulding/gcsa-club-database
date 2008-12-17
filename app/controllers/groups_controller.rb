@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_filter :check_authentication
+#  before_filter :check_authorization
 
   def index
     @groups = Cabinet.all
@@ -88,6 +89,9 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    group = Group.destroy(params[:id])
+    flash[:notice] = "'#{group.name}' was deleted."
+    redirect_to :action => :index
   end
 
 end

@@ -22,6 +22,11 @@
 	list-style-type: none;
 }
 
+#groups_list ul li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 #groups_list ul li a.active {
 	color: #2985DE;
 }
@@ -40,6 +45,7 @@
 }
 
 #group_detail {
+	position: relative;
 	margin: 0px;
 	padding: 0px 0px 0px 10px;
 	border-left: 1px dotted #000;
@@ -52,6 +58,12 @@
 
 #group_detail p {
 	font-size: .9em;
+}
+
+#group_detail #admin_links {
+	position: absolute;
+	top: 5px;
+	right: 5px;
 }
 
 #group_name {

@@ -1,3 +1,10 @@
+<% if session[:is_admin] %>
+<div id="admin_links">
+	<%= link_to 'Edit', edit_group_path(update_group_detail) %><br/>
+	<%= link_to 'Delete', group_path(update_group_detail), :confirm => "Are you sure?", :method => :delete %>
+</div>
+<% end %>
+
 <div id="group_name"><%= update_group_detail.name %></div>
 <div id="group_status"><em><b>Status:</b> <%= (update_group_detail.active) ? 'Active' : 'Inactive' %></em></div>
 <p><b>Leader(s):</b> <%= (update_group_detail.leader_name.nil?) ? "None" : update_group_detail.leader_name %></p>

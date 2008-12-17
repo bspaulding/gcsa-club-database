@@ -2,7 +2,9 @@
 <%= options_for_select(["Cabinets", "Clubs", "Councils", "Publications"], "Cabinets") %>
 </select>
 
+<% if session[:is_admin] %>
 <%= link_to 'New Group', new_group_path %>
+<% end %>
 
 <%= observe_field 'group_type_select', :url => {:action => 'update_groups_list'},
 		:update => { :success => 'groups_list', :failure => '/login/index' },
