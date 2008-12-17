@@ -5,5 +5,7 @@
 				:url => {:action => 'update_group_detail', :id => group.id},
 				:html => {:class => (group.active) ? 'active' : 'inactive'} %></li>
 	<% end %>
+<% else %>
+	<li>None</li>
 <% end %>
 </ul>
